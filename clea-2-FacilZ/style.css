@@ -1,0 +1,257 @@
+/**
+ * Theme Name:  Clea 2 Facilitation Z (child of StarGazer)
+ * Theme URI:   
+ * Description: Un thème pour un site "impact"
+ * Version:     1.0.0
+ * Author:      Anne-Laure Delpech
+ * Author URI:  http://parcours-performance.com
+ * Tags:        
+ * Text Domain: 
+ * License:     GNU General Public License v2.0 or later
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ * Template:    stargazer
+ */
+ 
+/***
+* bleu 	#0C7798 (12, 119, 152, 1)
+* rouge #E50745	(229, 7, 69, 1)
+**/
+
+/*****************************************************
+*
+* MENUS secondaire
+*
+******************************************************/ 
+@media only screen and (min-width: 1025px) {
+
+	#menu-secondary ul li a:hover, #menu-secondary ul li a:focus {
+		position: relative;
+		display: block;
+		/* width: 180px; */
+		padding: 18px 25px;
+		font-size: .75rem;
+		font-weight: 400;
+		line-height: 1.5;
+		border-top: 1px solid;
+		text-align: left;
+	}
+
+	.ltr #menu-secondary li li {
+		margin-left: 24px !important;
+	}
+
+	#menu-secondary ul li:hover > a, #menu-secondary ul li:focus > a {
+		background: #E50745;
+		color: white ;
+	}
+	
+	#menu-secondary li li a {
+		background: #E50745 !important;
+	}
+	
+	.menu li>ul::before {
+		border-bottom-color: transparent !important;
+	}
+	
+} 
+
+
+/********************************************************************************************************
+ * 3 - Polices corps et titres
+ *
+ ********************************************************************************************************/
+.font-primary, body, input, textarea, .label-checkbox, .label-radio, .required, #site-description, #reply-title small {
+	font-family: 'Open Sans', sans-serif !important;
+}
+
+html {
+	font-size: 14px !important;
+}
+
+main#content {
+	font-size: 95% !important;
+}
+
+body, .media-shortcode-extend .media-info, .wp-playlist-dark .wp-playlist-item {
+	color: #252525 !important;
+}
+
+
+h1 {
+	font-size: 2rem !important;
+}
+
+main#content h2 {
+	font-size: 1.5rem !important;
+	font-style: italic !important;
+	border-bottom: 1px solid rgba(12, 119, 152,1) !important;
+	border-top: 1px solid rgba(12, 119, 152,1) !important;
+	color: #0C7798 ;
+}
+
+h3 {
+	font-size: 1.2rem !important;
+	font-variant: small-caps;
+}
+
+h4 {
+	font-size: 1.1rem !important;
+}
+
+h5 {
+	font-size: 1rem !important;
+}
+
+h6 {
+	font-size: 0.95rem !important;
+	font-style: italic !important;
+}
+
+
+h1, h2 {
+	margin-bottom: 1rem !important;
+	padding-bottom: 0.8rem !important;
+	margin-top: 1rem !important;
+	padding-top: 0.8rem !important;
+}
+
+ 
+/*****************************************************
+*
+* strong testimonials (extension)
+*
+******************************************************/
+
+.strong-content .testimonial-company {
+	display: inline-block;
+	margin-left: 10px;
+}
+
+.wpm-testimonial .entry-content {
+	margin-bottom: 20px;
+}
+
+/* pour le contenu de strong testimonials */
+.testimonial-content h3 {
+	font-size: 1.2rem !important;
+}
+
+.testimonial-content p {
+	/*
+	font-size: 1rem !important;
+	line-height: 1.5 !important;
+	*/
+	text-align: left !important;
+}
+
+.testimonial .readmore {
+	/* font-size: 90%; */
+	text-align: center;
+	font-style: italic;
+}
+
+span.clea-fonctions {
+	font-weight: 400;
+}
+
+p.testimonial-activite {
+	font-weight: 400;
+	font-style: italic;
+}
+
+span.entry-terms.clea-temoin {
+	font-weight: 600;
+	margin-bottom: 20px;
+}
+
+.clea-first-name, .clea-last-name, .clea-fonctions {
+	margin-left: 1%;
+}
+
+.clea-first-name {
+	display: inline-block;
+}
+
+.clea-last-name {
+	display: inline-block;
+	text-transform: uppercase;
+}
+
+.clea-fonctions {
+	display: inline;
+	font-style: italic;
+}
+
+.testimonial-client {
+	margin-bottom: 2%;
+	line-height: 1;
+}
+
+/* gravatar for testimonials */
+.testimonial-image img.avatar {
+	border-radius: 15px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	width: 100px;
+	height: 100px;
+}
+
+.strong-view.default {
+	overflow: auto;
+	max-height: 300px;
+}
+
+.strong-cycle-controls.buttons1.right, .strong-cycle-controls.buttons1.left {
+	top: 150px !important ;
+}
+
+
+.strong-cycle-controls.buttons1 > span {
+	color: #0C7798 !important;
+}
+
+.strong-cycle-controls.buttons1 > span:hover {
+	color: #F49631 !important;
+}
+
+.contact-4 a {
+	color: #0C7798 ;
+	
+}
+
+.strong-view.default {
+	border: 1px solid #ccc;
+	margin-bottom: 4%;
+}
+
+.strong-view.default .testimonial,
+.strong-view.default .testimonial-inner {
+	border: 0 ;
+}
+
+.clea-first-name {
+	display: inline-block;
+}
+
+.clea-last-name {
+	display: inline-block;
+	text-transform: uppercase;
+}
+
+.clea-fonctions {
+	display: inline;
+	font-style: italic;
+}
+
+.clea-fonctions::before {
+	content: " - ";
+}
+
+.testimonial-client {
+	margin-bottom: 2%;
+	line-height: 1;
+}
+
+
+
+
