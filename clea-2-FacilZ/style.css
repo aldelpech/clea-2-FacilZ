@@ -34,8 +34,16 @@
 		line-height: 1.5;
 		border-top: 1px solid;
 		text-align: left;
+		text-decoration: none;
 	}
 
+	/* pour que le sous menu ne soit pas trop haut */
+	#menu-secondary ul ul {
+		top: 43px;
+	}
+
+
+	
 	.ltr #menu-secondary li li {
 		margin-left: 24px !important;
 	}
@@ -47,6 +55,7 @@
 	
 	#menu-secondary li li a {
 		background: #E50745 !important;
+		border-color: #0C7798;
 	}
 	
 	.menu li>ul::before {
@@ -78,11 +87,11 @@ body, .media-shortcode-extend .media-info, .wp-playlist-dark .wp-playlist-item {
 
 
 h1 {
-	font-size: 2rem !important;
+	font-size: 1.6 rem !important;
 }
 
 main#content h2 {
-	font-size: 1.5rem !important;
+	font-size: 1.3rem !important;
 	font-style: italic !important;
 	border-bottom: 1px solid rgba(12, 119, 152,1) !important;
 	border-top: 1px solid rgba(12, 119, 152,1) !important;
@@ -108,13 +117,21 @@ h6 {
 }
 
 
-h1, h2 {
+main#content h1, 
+main#content h2 {
 	margin-bottom: 1rem !important;
-	padding-bottom: 0.8rem !important;
+	padding-bottom: 0;
 	margin-top: 1rem !important;
-	padding-top: 0.8rem !important;
+	padding-top: 0;
 }
 
+#site-description {
+	font-style: italic;
+}
+
+.home h1 {
+	display: none ;
+}
  
 /*****************************************************
 *

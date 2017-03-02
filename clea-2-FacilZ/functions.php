@@ -17,16 +17,15 @@
 // Do theme setup on the 'after_setup_theme' hook.
 add_action( 'after_setup_theme', 'c2b_theme_setup', 11 ); 
 
+if ( function_exists( 'add_image_size' ) ) {
+	add_image_size( 'clea-fz-inter', 800, 800, false ) ;
+	add_image_size( 'clea-fz-full', 1200, 1200, false ) ;
+}
 
-# Change Read More link in automatic Excerpts
-remove_filter('get_the_excerpt', 'wp_trim_excerpt');
-add_filter('get_the_excerpt', 'c2b_custom_wp_trim_excerpt');
+add_filter( 'image_size_names_choose', 'clea_fz_image_size_names_choose' );
 
 
 function c2b_theme_setup() {
-
-	// Get the child template directory and make sure it has a trailing slash.
-	$child_dir = trailingslashit( get_stylesheet_directory() );
 
 	// Add support for the Wordpress custom-Logo 
 	// see https://codex.wordpress.org/Theme_Logo
@@ -39,97 +38,39 @@ function c2b_theme_setup() {
 	// add featured images to rss feed
 	add_filter('the_excerpt_rss', 'c2b_featuredtoRSS');
 	add_filter('the_content_feed', 'c2b_featuredtoRSS');
+
+	// add breadcrumb trail to the strong testimonials single posts
+	// add_filter( 'breadcrumb_trail_items', 'clea_fz_breadcrumb_trail_items' );
 	
 }
  
+function clea_fz_image_size_names_choose( $sizes ) {
+
+	$addsizes = array(
+	"clea-fz-inter" => __( "taille intermédiaire", 'clea-2-FZ'),
+	"clea-fz-full"	=> __( "Pleine page", 'clea-2-FZ')
+	);
+	$newsizes = array_merge($sizes, $addsizes);
+	return $newsizes;
+}
+
  
-
-
-/*******************************************
-* Change Read More link in Excerpts 
-*
-* see 
-* http://wordpress.stackexchange.com/questions/207050/read-more-tag-shows-up-on-every-post
-* http://wordpress.stackexchange.com/questions/141125/allow-html-in-excerpt/141136#141136
-*  
-
-*******************************************/
-
-function c2b_allowedtags() {
-    // Add custom tags to this string
-	// <a>,<img>,<video>,<script>,<style>,<audio> are not in
-    return '<br>,<em>,<i>,<ul>,<ol>,<li>,<p>'; 
-}
-
-
-function c2b_custom_wp_trim_excerpt($c2b_excerpt) {
-	$raw_excerpt = $c2b_excerpt;
+function clea_fz_enqueue_styles_scripts() {
+	// feuille de style pour l'impression
+	wp_enqueue_style( 'clea-fz-print', get_stylesheet_directory_uri() . '/css/print.css', array(), false, 'print' );
+	// style pour le site IB
+	wp_enqueue_style( 'clea-fz', get_stylesheet_directory_uri() . '/css/clea-fz-style.css', array(), false, 'all' );
 	
-	// text for the "read more" link
-	$rm_text = __( 'La suite &raquo;', 'stargazer' ) ;
-	$excerpt_end = ' <a class="more-link" href="'. esc_url( get_permalink() ) . '">' . $rm_text . '</a>'; 
+	// pour la page d'accueil uniquement
+	if( is_front_page() ) {
+		
+	}
+
+	// font awesome CDN
+	wp_enqueue_script( 'clea-ib-font-awesome', 'https://use.fontawesome.com/1dcb7878fd.js', false );
 	
-	
-	if ( '' == $c2b_excerpt ) {  
+} 
 
-		$c2b_excerpt = get_the_content('');
-		$c2b_excerpt = strip_shortcodes( $c2b_excerpt );
-		$c2b_excerpt = apply_filters('the_content', $c2b_excerpt);
-		$c2b_excerpt = str_replace(']]>', ']]&gt;', $c2b_excerpt);
-		$c2b_excerpt = strip_tags($c2b_excerpt, c2b_allowedtags()); /*IF you need to allow just certain tags. Delete if all tags are allowed */
-
-		//Set the excerpt word count and only break after sentence is complete.
-			$excerpt_word_count = 75;
-			$excerpt_length = apply_filters('excerpt_length', $excerpt_word_count); 
-			$tokens = array();
-			$excerptOutput = '';
-			$count = 0;
-
-			// Divide the string into tokens; HTML tags, or words, followed by any whitespace
-			preg_match_all('/(<[^>]+>|[^<>\s]+)\s*/u', $c2b_excerpt, $tokens);
-
-			foreach ($tokens[0] as $token) { 
-
-				if ($count >= $excerpt_length && preg_match('/[\,\;\?\.\!]\s*$/uS', $token)) { 
-				// Limit reached, continue until , ; ? . or ! occur at the end
-					$excerptOutput .= trim($token);
-					break;
-				}
-
-				// Add words to complete sentence
-				$count++;
-
-				// Append what's left of the token
-				$excerptOutput .= $token;
-			}
-
-		$c2b_excerpt = trim(force_balance_tags($excerptOutput));
-	   
-			// $c2b_excerpt .= $excerpt_end ;
-			$excerpt_more = apply_filters( 'excerpt_more', ' ' . $excerpt_end ); 
-
-			$pos = strrpos($c2b_excerpt, '</');
-			if ($pos !== false) {
-				// Inside last HTML tag
-				$c2b_excerpt = substr_replace($c2b_excerpt, $excerpt_end, $pos, 0); // Add read more next to last word 
-			} else {
-				// After the content
-				$c2b_excerpt .= $excerpt_more; //Add read more in new paragraph 
-			}
-			
-		return $c2b_excerpt;   
-
-	} /* else {
-		return 'AAA ! ' . $raw_excerpt;
-	} */
-	
-	// add read more link to the manual extract
-	$c2b_excerpt .= $excerpt_end ;
-	// return the manual extract
-	// return apply_filters('c2b_custom_wp_trim_excerpt', 'AAA ! ' . $c2b_excerpt, $raw_excerpt);
-	return apply_filters('c2b_custom_wp_trim_excerpt', $c2b_excerpt, $raw_excerpt);
-}
-  
 	
 function c2b_featuredtoRSS( $content ) {
 	// https://woorkup.com/show-featured-image-wordpress-rss-feed/
@@ -142,6 +83,31 @@ function c2b_featuredtoRSS( $content ) {
 	return $content;
 }
 
+
+function clea_fz_breadcrumb_trail_items( $items ) {
+	// http://themehybrid.com/board/topics/filter-breadcrumb_trail_args-syntax-for-2-arguments
+	// http://themehybrid.com/board/topics/display-blog-in-breadcrumbs
+	
+	if( is_post_type( 'wpm-testimonial' ) )  {			
+
+		$blog_id = absint( get_option( 'page_for_posts' ) );
+
+		if ( 0 < $blog_id ) {
+
+			$new_items = array();
+
+			// Shifts the "home" item off of original array.
+			$new_items[] = array_shift( $items );
+
+			$new_items[] = sprintf( '<a href="%s">%s</a>', esc_url( get_permalink( $blog_id ) ), esc_html( get_the_title( $blog_id ) ) );
+
+			$items = array_merge( $new_items, $items );
+		}
+	}
+		
+
+	return $items;
+}
 
 
 ?>
