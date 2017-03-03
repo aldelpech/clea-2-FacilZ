@@ -159,70 +159,8 @@ main#content h2 {
 *
 ******************************************************/
 
-.strong-content .testimonial-company {
-	display: inline-block;
-	margin-left: 10px;
-}
 
-.wpm-testimonial .entry-content {
-	margin-bottom: 20px;
-}
-
-/* pour le contenu de strong testimonials */
-.testimonial-content h3 {
-	font-size: 1.2rem !important;
-}
-
-.testimonial-content p {
-	/*
-	font-size: 1rem !important;
-	line-height: 1.5 !important;
-	*/
-	text-align: left !important;
-}
-
-.testimonial .readmore {
-	/* font-size: 90%; */
-	text-align: center;
-	font-style: italic;
-}
-
-span.clea-fonctions {
-	font-weight: 400;
-}
-
-p.testimonial-activite {
-	font-weight: 400;
-	font-style: italic;
-}
-
-span.entry-terms.clea-temoin {
-	font-weight: 600;
-	margin-bottom: 20px;
-}
-
-.clea-first-name, .clea-last-name, .clea-fonctions {
-	margin-left: 1%;
-}
-
-.clea-first-name {
-	display: inline-block;
-}
-
-.clea-last-name {
-	display: inline-block;
-	text-transform: uppercase;
-}
-
-.clea-fonctions {
-	display: inline;
-	font-style: italic;
-}
-
-.testimonial-client {
-	margin-bottom: 2%;
-	line-height: 1;
-}
+/*** Toutes les vues ****/
 
 /* gravatar for testimonials */
 .testimonial-image img.avatar {
@@ -233,37 +171,33 @@ span.entry-terms.clea-temoin {
 	height: 100px;
 }
 
-.strong-view.default {
-	overflow: auto;
-	max-height: 300px;
-}
-
-.strong-cycle-controls.buttons1.right, .strong-cycle-controls.buttons1.left {
-	top: 150px !important ;
+.testimonial-content p {
+	font-size: 85%;	
 }
 
 
-.strong-cycle-controls.buttons1 > span {
-	color: #0C7798 !important;
+/*** Vue tous les témoignages - MASONRY ****/
+.strong-view.image-right .testimonial-heading {
+	color: #0C7798;
+	font-size: 90%;
 }
 
-.strong-cycle-controls.buttons1 > span:hover {
-	color: #F49631 !important;
+.testimonial .readmore {
+	font-size: 90%; 
+	text-align: center;
+	font-style: italic;
 }
 
-.contact-4 a {
-	color: #0C7798 ;
-	
+
+.testimonial-client {
+	margin-bottom: 2%;
+	line-height: 1.2;
 }
 
-.strong-view.default {
-	border: 1px solid #ccc;
-	margin-bottom: 4%;
-}
-
-.strong-view.default .testimonial,
-.strong-view.default .testimonial-inner {
-	border: 0 ;
+.clea-first-name, 
+.clea-last-name {
+	margin-left: 1%;
+	font-size: 90%;
 }
 
 .clea-first-name {
@@ -273,22 +207,53 @@ span.entry-terms.clea-temoin {
 .clea-last-name {
 	display: inline-block;
 	text-transform: uppercase;
+	margin-right: 1%;
 }
 
-.clea-fonctions {
+.clea-company {
 	display: inline;
 	font-style: italic;
 }
 
-.clea-fonctions::before {
-	content: " - ";
+.clea-activite {
+	display: inline;
+	font-weight: 400;
+	font-style: italic;
+	font-size: 90%;
 }
 
-.testimonial-client {
+.clea-produit {
+	font-size: 80%;
+	margin-top: 2%;
+}
+
+.clea-produit .testimonial-field-before {
+	text-transform: uppercase;
+}
+
+/*** Vue slider ****/
+a.wpmslider-prev,
+a.wpmslider-next {
+	border: none ;
+	
+}
+
+.strong-view.controls-style-buttons .wpmslider-wrapper .wpmslider-next:before,
+.strong-view.controls-style-buttons .wpmslider-wrapper .wpmslider-prev:before {
+	color: #0C7798 ;	
+}
+
+.strong-view.default .testimonial-heading {
+	color: #0C7798;
+} 
+
+.strong-view.default.slider-container .testimonial-readmore {
+	display: none;
+}
+
+.strong-view.default.slider-container {
 	margin-bottom: 2%;
-	line-height: 1;
 }
-
 
 
 
