@@ -19,6 +19,19 @@
 
 /*****************************************************
 *
+* Header
+*
+******************************************************/ 
+img.custom-logo {
+	border: none;
+}
+
+#site-description {
+	font-style: italic;
+}
+
+/*****************************************************
+*
 * MENUS secondaire
 *
 ******************************************************/ 
@@ -34,7 +47,6 @@
 		line-height: 1.5;
 		border-top: 1px solid;
 		text-align: left;
-		text-decoration: none;
 	}
 
 	/* pour que le sous menu ne soit pas trop haut */
@@ -42,16 +54,24 @@
 		top: 43px;
 	}
 
-
-	
 	.ltr #menu-secondary li li {
 		margin-left: 24px !important;
 	}
 
-	#menu-secondary ul li:hover > a, #menu-secondary ul li:focus > a {
+	#menu-secondary ul li:hover > a, 
+	#menu-secondary ul li:focus > a {
 		background: #E50745;
 		color: white ;
 	}
+
+	/* Tous les liens internes auront un fond transparent et non souligné */
+	#menu-secondary ul li:hover > a[href^="#"], 
+	#menu-secondary ul li:focus > a[href^="#"] 	{
+		background-color: transparent;
+		text-decoration: none;
+		color: #E50745;
+	}
+
 	
 	#menu-secondary li li a {
 		background: #E50745 !important;
@@ -125,13 +145,13 @@ main#content h2 {
 	padding-top: 0;
 }
 
-#site-description {
-	font-style: italic;
-}
 
-.home h1 {
+
+.home main#content h1 {
 	display: none ;
 }
+
+
  
 /*****************************************************
 *
@@ -268,6 +288,7 @@ span.entry-terms.clea-temoin {
 	margin-bottom: 2%;
 	line-height: 1;
 }
+
 
 
 
