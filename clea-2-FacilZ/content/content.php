@@ -19,21 +19,19 @@
 			</header><!-- .entry-header -->
 
 			<div <?php hybrid_attr( 'entry-content' ); ?>>			
-				<h4>TEST !!!!</h4>
 				<?php 
 				if( has_post_thumbnail() ) {
 					the_post_thumbnail('medium', array( 'class' => 'alignright' )); 
 				} ?>
 				<?php the_content(); ?>
 				<span class="entry-terms clea-temoin">
-					<?php echo get_post_meta( get_the_ID(), 'first_name', true )?> <?php echo get_post_meta( get_the_ID(), 'last_name', true )?>, <span class="clea-fonctions"><a href="<?php echo get_post_meta( get_the_ID(), 'company_website', true )?>"><?php echo get_post_meta( get_the_ID(), 'company_name', true )?></a>. </span> 
-					<p class="testimonial-activite"><?php echo get_post_meta( get_the_ID(), 'activite', true )?></p>
-				</span>				
+					<?php echo get_post_meta( get_the_ID(), 'first_name', true )?> <?php echo get_post_meta( get_the_ID(), 'last_name', true )?>, <span class="clea-fonctions"><?php echo get_post_meta( get_the_ID(), 'fonctions_ou_statut', true )?>. </span> </span>				
 				<?php wp_link_pages(); ?>
 			</div><!-- .entry-content -->
 
 			<footer class="entry-footer">
 				<?php hybrid_post_terms( array( 'taxonomy' => 'wpm-testimonial-category', 'text' => __( 'Catégorie %s', 'clea-2-IB' ) ) ); ?>
+				<?php hybrid_post_terms( array( 'taxonomy' => 'orientation', 'text' => __( 'Tagged %s', 'stargazer' ), 'before' => '<br />' ) ); ?>
 			</footer><!-- .entry-footer -->
 	
 		<?php else : // not a testimonials single post. ?>

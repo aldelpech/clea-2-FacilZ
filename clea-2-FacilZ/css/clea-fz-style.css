@@ -4,23 +4,607 @@
 *
 */
 
+/*** Page d'accueil définie dans clea-fz-front-page.css ***/
 
-/**********************
-* passage en pleine largeur
-**********************/
 
-#container>.wrap, #footer>.wrap, #menu-primary>.wrap {
-    max-width: 100%;
-    margin: 0 auto;
-    box-sizing: border-box;
+/*****************************************************
+*
+* MENUS secondaire
+*
+******************************************************/ 
+@media only screen and (min-width: 1025px) {
+
+	#menu-secondary ul li a:hover, #menu-secondary ul li a:focus {
+		position: relative;
+		display: block;
+		/* width: 180px; */
+		padding: 18px 25px;
+		font-size: .75rem;
+		font-weight: 400;
+		line-height: 1.5;
+		border-top: 1px solid;
+		text-align: left;
+	}
+
+	/* pour que le sous menu ne soit pas trop haut */
+	#menu-secondary ul ul {
+		top: 43px;
+	}
+
+	.ltr #menu-secondary li li {
+		margin-left: 24px !important;
+	}
+
+	#menu-secondary ul li:hover > a, 
+	#menu-secondary ul li:focus > a {
+		background: #E50745;
+		color: white ;
+	}
+
+	/* Tous les liens internes auront un fond transparent et non souligné */
+	#menu-secondary ul li:hover > a[href^="#"], 
+	#menu-secondary ul li:focus > a[href^="#"] 	{
+		background-color: transparent;
+		text-decoration: none;
+		color: #E50745;
+	}
+
+	
+	#menu-secondary li li a {
+		background: #E50745 !important;
+		border-color: #0C7798;
+	}
+	
+	.menu li>ul::before {
+		border-bottom-color: transparent !important;
+	}
+	
+} 
+
+
+
+/********************************************************************************************************
+ * 3 - Polices corps et titres
+ *
+ ********************************************************************************************************/
+.font-primary, body, input, textarea, .label-checkbox, .label-radio, .required, #site-description, #reply-title small {
+	font-family: 'Open Sans', sans-serif !important;
 }
 
-.custom-background.layout-1c-narrow #container>.wrap,
-.layout-1c-narrow #container>.wrap,
+html {
+	font-size: 14px !important;
+}
+
+main#content {
+	font-size: 95% !important;
+}
+
+body, .media-shortcode-extend .media-info, .wp-playlist-dark .wp-playlist-item {
+	color: #252525 !important;
+}
+
+
+h1 {
+	font-size: 1.6 rem !important;
+}
+
+main#content h1 {
+    border-bottom: none;
+    color: #E50745;
+    line-height: 1.2;
+    font-size: xx-large;
+}
+
+main#content h2 {
+    font-size: 1.3rem !important;
+    font-style: italic !important;
+    /* border-bottom: 1px solid rgba(12, 119, 152,1) !important; */
+    /* border-top: 1px solid rgba(12, 119, 152,1) !important; */
+    color: #0C7798;
+    border-bottom: none;
+}
+
+h3 {
+	font-size: 1.2rem !important;
+	font-variant: small-caps;
+}
+
+h4 {
+	font-size: 1.1rem !important;
+}
+
+h5 {
+	font-size: 1rem !important;
+}
+
+h6 {
+	font-size: 0.95rem !important;
+	font-style: italic !important;
+}
+
+
+main#content h1, 
+main#content h2 {
+	margin-bottom: 1rem !important;
+	padding-bottom: 0;
+	margin-top: 1rem !important;
+	padding-top: 0;
+}
+
+
+
+.home main#content h1 {
+	display: none ;
+}
+
+/********************************************************************************************************
+ * 4 - Images 
+ *
+ ********************************************************************************************************/
+
+img {
+	border: none !important;
+	padding: 0 !important;
+}
+
+img.alignnone.wp-post-image {
+	width: 100%;
+	margin-bottom: 4%;
+}
+
+/* gravatar for testimonials */
+.testimonial-image img.avatar {
+	border-radius: 15px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	width: 100px;
+	height: 100px;
+}
+
+.strong-view.default {
+	overflow: auto;
+	max-height: 300px;
+}
+
+.strong-cycle-controls.buttons1.right, .strong-cycle-controls.buttons1.left {
+	top: 150px !important ;
+}
+
+/********************************************************************************************************
+ * 3 - sidebar subsidiary
+ *
+ ********************************************************************************************************/
+
+@media only screen and (max-width: 400px) {
+	
+	aside#sidebar-subsidiary section#nav_menu-2 {
+		display: none ;
+	}
+}
+ 
+
+@media only screen and (max-width: 699px) {
+
+	aside#sidebar-subsidiary section#recent-posts-3 {
+		display: none ;
+	}	
+	
+}
+ 
+/********************************************************************************************************
+ * 2 - header
+ *
+ ********************************************************************************************************/
+
+img.custom-logo {
+	width: auto;
+	height: 78px;
+	margin-bottom: 0 !important;
+} 
+ 
+header#header {
+    max-width: 1075px;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+ 
+.display-header-text #header,
+header#header.site-header {
+	border-bottom: 0;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.custom-logo {
+	margin-bottom: 0 !important ;
+}
+
+
+/*
+.custom-background #header, .custom-background #main, .custom-background #sidebar-subsidiary {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+*/
+	
+aside#sidebar-subsidiary {
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@media only screen and (max-width: 370px) {
+
+	img.custom-logo {
+		width: auto;
+		height: 60px;
+	}
+
+	#menu-secondary li a, #menu-secondary .menu-toggle button {
+		color: rgba(255,255,255,1) !important;
+		background: rgba(104,145,175,0.5) !important;
+		border-color: rgba(104,145,175,1) !important;
+	}
+
+	div#clea-branding {
+		padding: 0;	
+	}
+
+	nav#menu-secondary {
+		position: initial;
+		width: initial;
+		max-width: 60% ;
+		margin-left: auto;
+	}
+
+	
+	/* Temoignages1200-400-300x100.jpg 
+	.display-header-text #header,
+	header#header.site-header {
+		background: url(../images/Temoignages1200-400-300x100.jpg) no-repeat center;
+		min-height: 100px;
+		background-size: 100%;
+		margin-top: -5px;
+
+	} */
+
+	aside#sidebar-subsidiary,
+	.ib-fond {
+		max-width: 90%;
+	}
+	
+}
+
+@media only screen and (min-width: 371px) and (max-width: 799px) {
+
+	#menu-secondary li a, #menu-secondary .menu-toggle button {
+		color: rgba(255,255,255,1) !important;
+		background: rgba(104,145,175,0.5) !important;
+		border-color: rgba(104,145,175,1) !important;
+	}
+
+	nav#menu-secondary {
+		position: initial;
+		width: initial;
+		margin-left: auto;
+	}	
+	
+
+	div#clea-header {
+		top: 150px;
+	}
+
+	div#clea-branding {
+		padding: 0.5%;
+		display: flex;		
+	}
+	
+	aside#sidebar-subsidiary,
+	.ib-fond {
+		max-width: 95%;
+	}
+
+
+	
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1024px){
+
+	#menu-secondary li a, #menu-secondary .menu-toggle button {
+		color: rgba(255,255,255,1) !important;
+		background: rgba(104,145,175,0.5) !important;
+		border-color: rgba(104,145,175,1) !important;
+	}
+
+	nav#menu-secondary {
+		position: initial;
+		width: initial;
+		margin-left: auto;
+	}	
+	
+
+	div#clea-header {
+		top: 170px;
+	}
+
+
+	div#clea-branding {
+		padding: 0.5%;
+		display: flex;		
+	}
+	
+	aside#sidebar-subsidiary,
+	.ib-fond {
+		max-width: 95%;
+	}
+		
+}
+
+@media only screen and (min-width: 1025px) {
+
+	/*
+	.display-header-text #header,
+	header#header.site-header {
+		background: url(../images/Temoignages1200-400.jpg) no-repeat center;
+		min-height: 400px;
+		background-size: 100%;
+		margin-top: -35px;
+
+	} */
+
+	/* nav#menu-secondary {
+		display: flex;	
+		margin-top: auto;
+		margin-bottom: auto;
+		padding-top: 0 !important;
+	} 
+	
+
+	aside#sidebar-subsidiary,
+	.ib-fond {
+		max-width: 1075px;
+	} */
+	
+	#menu-secondary {
+		width: 68% !important;
+		margin: 0px 0;
+	}
+
+	#branding {
+		width: 30% ! important;
+		display: inline-block;
+	}
+	
+	#branding h1#site-title,
+	#branding h2#site-description	{
+		float: right;
+	}
+}
+	
+
+
+
+
+
+/********************************************************************************************************
+ * 1 - forme page 
+ *
+ ********************************************************************************************************/
+
 .custom-background #container>.wrap {
-    max-width: 100% !important; 
-	width: 100% ;
+	max-width: none !important;
+	margin-top: 0 !important;
+	margin-bottom: 20px !important;
 }
 
+.header-image {
+	width: 100%;
+	border-radius: 0;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+}
+
+header#header .wrap {
+	margin-left: 0 !important; 
+	margin-right: 0 !important;
+}
+
+@media only screen and (min-width: 800px) {
+
+	#main {
+		max-width: none;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	main#content {
+		max-width: 800px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+}
+
+#sidebar-subsidiary li {
+	display: block;
+}
+
+
+/********************************************************************************************************
+ * 0 - colors
+ *
+ *  bleu 	#0C7798 (12, 119, 152, 1)
+ * rouge #E50745	(229, 7, 69, 1)
+********************************************************************************************************/
+
+#menu-primary {
+	background: #0C7798;
+}
+
+
+/* #menu-secondary li a {
+	color: #FFFFFF !important;
+} */
+
+blockquote {
+	outline-color: rgba(104,145,175,1) !important;
+	background-color: rgba(104,145,175,1) !important;
+	/* color: #656565 !important; */
+}
+
+/*** formulaire contact form 7 ***/
+textarea.wpcf7-form-control,
+input.wpcf7-form-control.wpcf7-text {
+	border: 2px solid rgba(104,145,175,1) ;
+	border-radius: 10px;
+}
+
+input.wpcf7-form-control.wpcf7-submit.font-primary.font-secondary {
+	font-size: 120%;
+	border-radius: 10px;
+	color: #F49631;
+	font-weight: 800;
+	background-color: transparent;
+	border: 2px solid rgba(104,145,175,1) ;
+}
+
+
+.font-headlines, h1, h2, h3, h4, h5, h6 {
+	color: #25597F !important;
+}
+
+#footer {
+	background: #0C7798 !important;
+	padding: 0 !important;
+}
+
+#footer p {
+	color: white;
+}
+
+/*****************************************************
+*
+* strong testimonials (extension)
+*
+******************************************************/
+
+
+/*** Toutes les vues ****/
+
+/* gravatar for testimonials */
+.testimonial-image img.avatar {
+	border-radius: 15px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	width: 100px;
+	height: 100px;
+}
+
+.testimonial-content p {
+	font-size: 85%;	
+}
+
+
+/*** Vue tous les témoignages - MASONRY ****/
+.strong-view.image-right .testimonial-heading {
+	color: #0C7798;
+	font-size: 90%;
+}
+
+.testimonial .readmore {
+	font-size: 90%; 
+	text-align: center;
+	font-style: italic;
+}
+
+
+.testimonial-client {
+	margin-bottom: 2%;
+	line-height: 1.2;
+}
+
+.clea-first-name, 
+.clea-last-name {
+	margin-left: 1%;
+	font-size: 90%;
+}
+
+.clea-first-name {
+	display: inline-block;
+}
+
+.clea-last-name {
+	display: inline-block;
+	text-transform: uppercase;
+	margin-right: 1%;
+}
+
+.clea-company {
+	display: inline;
+	font-style: italic;
+}
+
+.clea-activite {
+	display: inline;
+	font-weight: 400;
+	font-style: italic;
+	font-size: 90%;
+}
+
+.clea-produit {
+	font-size: 80%;
+	margin-top: 2%;
+}
+
+.clea-produit .testimonial-field-before {
+	text-transform: uppercase;
+}
+
+/*** Vue slider ****/
+a.wpmslider-prev,
+a.wpmslider-next {
+	border: none ;
+	
+}
+
+.strong-view.controls-style-buttons .wpmslider-wrapper .wpmslider-next:before,
+.strong-view.controls-style-buttons .wpmslider-wrapper .wpmslider-prev:before {
+	color: #0C7798 ;	
+}
+
+.strong-view.default .testimonial-heading {
+	color: #0C7798;
+} 
+
+.strong-view.default.slider-container .testimonial-readmore {
+	display: none;
+}
+
+.strong-view.default.slider-container {
+	margin-bottom: 2%;
+}
+
+
+/*****************************************************
+*
+* Pages produit - et page d'accueil temp sur codev
+*
+******************************************************/
+
+a.su-button.bouton-accueil {
+	max-width: 48%; 
+	margin-right: 0.8%;
+}
+
+a.su-button.bouton-accueil span {
+    font-size: 100% !important;
+}
+
+a.su-button.bouton-accueil span small {
+    font-size: inherit;
+} 
 
 

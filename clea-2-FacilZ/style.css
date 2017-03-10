@@ -1,5 +1,5 @@
 /**
- * Theme Name:  Clea 2 Facilitation Z (child of StarGazer)
+ * Theme Name:  IB (child of StarGazer)
  * Theme URI:   
  * Description: Un thème pour un site "impact"
  * Version:     1.0.0
@@ -12,295 +12,172 @@
  * Template:    stargazer
  */
  
-/***
-* bleu 	#0C7798 (12, 119, 152, 1)
-* rouge #E50745	(229, 7, 69, 1)
-**/
+
+/*
 
 
-/*****************************************************
-*
-* Pleine largeur !
-*
-******************************************************/
-#sidebar-subsidiary,
-main#content,
-header#header {
-    margin-right: auto;
-    margin-left: auto;
-}
+* TABLE OF CONTENTS:
 
-main#content {
-    max-width: 900px;
-}
-
-#sidebar-subsidiary,
-header#header {
-    max-width: 1200px;
-}
-
-/*****************************************************
-*
-* Header
-*
-******************************************************/ 
-img.custom-logo {
-	border: none;
-}
-
-#site-description {
-	font-style: italic;
-}
-
-/*****************************************************
-*
-* MENUS secondaire
-*
-******************************************************/ 
-@media only screen and (min-width: 1025px) {
-
-	#menu-secondary ul li a:hover, #menu-secondary ul li a:focus {
-		position: relative;
-		display: block;
-		/* width: 180px; */
-		padding: 18px 25px;
-		font-size: .75rem;
-		font-weight: 400;
-		line-height: 1.5;
-		border-top: 1px solid;
-		text-align: left;
-	}
-
-	/* pour que le sous menu ne soit pas trop haut */
-	#menu-secondary ul ul {
-		top: 43px;
-	}
-
-	.ltr #menu-secondary li li {
-		margin-left: 24px !important;
-	}
-
-	#menu-secondary ul li:hover > a, 
-	#menu-secondary ul li:focus > a {
-		background: #E50745;
-		color: white ;
-	}
-
-	/* Tous les liens internes auront un fond transparent et non souligné */
-	#menu-secondary ul li:hover > a[href^="#"], 
-	#menu-secondary ul li:focus > a[href^="#"] 	{
-		background-color: transparent;
-		text-decoration: none;
-		color: #E50745;
-	}
-
-	
-	#menu-secondary li li a {
-		background: #E50745 !important;
-		border-color: #0C7798;
-	}
-	
-	.menu li>ul::before {
-		border-bottom-color: transparent !important;
-	}
-	
-} 
+ * 		1 - Header and Footer
+ * 		2 - Main and Content
+ * 		3 - Media
+ * 		4 - Sidebars and Widgets
+ * 		5 - Comments Template
+ * 		6 - Menus
+ * 		7 - Plugins
+*/
 
 
-/********************************************************************************************************
- * 3 - Polices corps et titres
- *
- ********************************************************************************************************/
 .font-primary, body, input, textarea, .label-checkbox, .label-radio, .required, #site-description, #reply-title small {
 	font-family: 'Open Sans', sans-serif !important;
 }
 
-html {
-	font-size: 14px !important;
-}
-
-main#content {
-	font-size: 95% !important;
-}
-
-body, .media-shortcode-extend .media-info, .wp-playlist-dark .wp-playlist-item {
-	color: #252525 !important;
-}
 
 
-h1 {
-	font-size: 1.6 rem !important;
-}
 
-main#content h1 {
-    border-bottom: none;
-    color: #E50745;
-    line-height: 1.2;
-    font-size: xx-large;
-}
+/********************************************************************************************************
+ * 1 - Header and Footer
+ *
+ * .
+ ********************************************************************************************************/
 
-main#content h2 {
-    font-size: 1.3rem !important;
-    font-style: italic !important;
-    /* border-bottom: 1px solid rgba(12, 119, 152,1) !important; */
-    /* border-top: 1px solid rgba(12, 119, 152,1) !important; */
-    color: #0C7798;
-    border-bottom: none;
-}
-
-h3 {
-	font-size: 1.2rem !important;
-	font-variant: small-caps;
-}
-
-h4 {
-	font-size: 1.1rem !important;
-}
-
-h5 {
-	font-size: 1rem !important;
-}
-
-h6 {
-	font-size: 0.95rem !important;
-	font-style: italic !important;
+@media only screen and (min-width: 800px) {
+		
+/*	#branding {
+		width: 80%;
+		max-width: none ;
+	}
 }
 
 
-main#content h1, 
-main#content h2 {
-	margin-bottom: 1rem !important;
-	padding-bottom: 0;
-	margin-top: 1rem !important;
-	padding-top: 0;
+header#header .wrap {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+*/
+.site-header .wrap {
+    /* https://css-tricks.com/using-flexbox/ */
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;      /* TWEENER - IE 10 */
+	display: -webkit-flex;     /* NEW - Chrome */
+	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+} */
+
+aside#sidebar-inside-header {
+    /* https://css-tricks.com/using-flexbox/ */
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;      /* TWEENER - IE 10 */
+	display: -webkit-flex;     /* NEW - Chrome */
+	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    flex-direction: row-reverse;
+    justify-content: space-around;
+	align-items: center;
 }
 
 
+/********************************************************************************************************
+ * 2 - Main and Content
+ *
+ * .
+ ********************************************************************************************************/
 
-.home main#content h1 {
-	display: none ;
+/* ====== full width layouts ====== */
+.layout-2c-l #container>.wrap,
+.layout-2c-l #footer>.wrap, 
+.layout-2c-l #menu-primary {
+    max-width: 100%;
 }
 
+@media only screen and (min-width: 800px) {
+	.layout-2c-l #menu-primary>.wrap {
+		max-width: 1075px;
+	}
 
- 
-/*****************************************************
-*
-* strong testimonials (extension)
-*
-******************************************************/
-
-
-/*** Toutes les vues ****/
-
-/* gravatar for testimonials */
-.testimonial-image img.avatar {
-	border-radius: 15px;
-	-webkit-border-radius: 15px;
-	-moz-border-radius: 15px;
-	width: 100px;
-	height: 100px;
-}
-
-.testimonial-content p {
-	font-size: 85%;	
-}
-
-
-/*** Vue tous les témoignages - MASONRY ****/
-.strong-view.image-right .testimonial-heading {
-	color: #0C7798;
-	font-size: 90%;
-}
-
-.testimonial .readmore {
-	font-size: 90%; 
-	text-align: center;
-	font-style: italic;
-}
-
-
-.testimonial-client {
-	margin-bottom: 2%;
-	line-height: 1.2;
-}
-
-.clea-first-name, 
-.clea-last-name {
-	margin-left: 1%;
-	font-size: 90%;
-}
-
-.clea-first-name {
-	display: inline-block;
-}
-
-.clea-last-name {
-	display: inline-block;
-	text-transform: uppercase;
-	margin-right: 1%;
-}
-
-.clea-company {
-	display: inline;
-	font-style: italic;
-}
-
-.clea-activite {
-	display: inline;
-	font-weight: 400;
-	font-style: italic;
-	font-size: 90%;
-}
-
-.clea-produit {
-	font-size: 80%;
-	margin-top: 2%;
-}
-
-.clea-produit .testimonial-field-before {
-	text-transform: uppercase;
-}
-
-/*** Vue slider ****/
-a.wpmslider-prev,
-a.wpmslider-next {
-	border: none ;
+	#main {
+		max-width: 1075px;
+		margin-left: auto;
+		margin-right: auto;
+	}
 	
 }
 
-.strong-view.controls-style-buttons .wpmslider-wrapper .wpmslider-next:before,
-.strong-view.controls-style-buttons .wpmslider-wrapper .wpmslider-prev:before {
-	color: #0C7798 ;	
+/* ====== Do not display author ====== */	
+	.ltr .entry-author {
+		display: none !important;
+	}
+
+
+
+/********************************************************************************************************
+ * 3 - Media
+ *
+ * .
+ ********************************************************************************************************/
+
+/* ====== images ====== */
+img {
+
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
 }
 
-.strong-view.default .testimonial-heading {
-	color: #0C7798;
-} 
-
-.strong-view.default.slider-container .testimonial-readmore {
-	display: none;
+figcaption.wp-caption-text.font-secondary {
+    position: initial;
 }
 
-.strong-view.default.slider-container {
-	margin-bottom: 2%;
+.ltr .wp-caption .wp-caption-text {
+    margin-right: 0;
+    text-align: center;
 }
 
 
-/*****************************************************
-*
-* Pages produit - et page d'accueil temp sur codev
-*
-******************************************************/
+/********************************************************************************************************
+ * 4 - Sidebars and Widgets
+ *
+ * .
+ ********************************************************************************************************/
 
-a.su-button.bouton-accueil {
-	max-width: 48%; 
-	margin-right: 0.8%;
+/* ======  ====== */
+
+/* ====== Subsidiary sidebar ====== */
+#sidebar-subsidiary {
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
-a.su-button.bouton-accueil span {
-    font-size: 100% !important;
-}
+/********************************************************************************************************
+ * 5 - Comments Template
+ *
+ * .
+ ********************************************************************************************************/
 
-a.su-button.bouton-accueil span small {
-    font-size: inherit;
-} 
+/* ======  ====== */
+
+/********************************************************************************************************
+ * 6 - Menus
+ *
+ * .
+ ********************************************************************************************************/
+
+
+
+/* ======  ====== */
+
+/********************************************************************************************************
+ * 7 - Plugins 
+ *
+ * .
+ ********************************************************************************************************/
+
+
+
+
+
+
+
