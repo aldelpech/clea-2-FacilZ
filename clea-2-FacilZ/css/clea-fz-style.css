@@ -5,4 +5,22 @@
 */
 
 
+/**********************
+* passage en pleine largeur
+**********************/
+
+#container>.wrap, #footer>.wrap, #menu-primary>.wrap {
+    max-width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.custom-background.layout-1c-narrow #container>.wrap,
+.layout-1c-narrow #container>.wrap,
+.custom-background #container>.wrap {
+    max-width: 100% !important; 
+	width: 100% ;
+}
+
+
 

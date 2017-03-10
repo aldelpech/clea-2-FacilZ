@@ -27,6 +27,9 @@ add_filter( 'image_size_names_choose', 'clea_fz_image_size_names_choose' );
 
 function c2b_theme_setup() {
 
+	/* Register and load styles and scripts. */
+	add_action( 'wp_enqueue_scripts', 'clea_fz_enqueue_styles_scripts', 4 ); 
+
 	// Add support for the Wordpress custom-Logo 
 	// see https://codex.wordpress.org/Theme_Logo
 	add_theme_support( 'custom-logo', array(

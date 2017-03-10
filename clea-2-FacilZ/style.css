@@ -17,6 +17,28 @@
 * rouge #E50745	(229, 7, 69, 1)
 **/
 
+
+/*****************************************************
+*
+* Pleine largeur !
+*
+******************************************************/
+#sidebar-subsidiary,
+main#content,
+header#header {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+main#content {
+    max-width: 900px;
+}
+
+#sidebar-subsidiary,
+header#header {
+    max-width: 1200px;
+}
+
 /*****************************************************
 *
 * Header
@@ -110,12 +132,20 @@ h1 {
 	font-size: 1.6 rem !important;
 }
 
+main#content h1 {
+    border-bottom: none;
+    color: #E50745;
+    line-height: 1.2;
+    font-size: xx-large;
+}
+
 main#content h2 {
-	font-size: 1.3rem !important;
-	font-style: italic !important;
-	border-bottom: 1px solid rgba(12, 119, 152,1) !important;
-	border-top: 1px solid rgba(12, 119, 152,1) !important;
-	color: #0C7798 ;
+    font-size: 1.3rem !important;
+    font-style: italic !important;
+    /* border-bottom: 1px solid rgba(12, 119, 152,1) !important; */
+    /* border-top: 1px solid rgba(12, 119, 152,1) !important; */
+    color: #0C7798;
+    border-bottom: none;
 }
 
 h3 {
@@ -256,5 +286,21 @@ a.wpmslider-next {
 }
 
 
+/*****************************************************
+*
+* Pages produit - et page d'accueil temp sur codev
+*
+******************************************************/
 
+a.su-button.bouton-accueil {
+	max-width: 48%; 
+	margin-right: 0.8%;
+}
 
+a.su-button.bouton-accueil span {
+    font-size: 100% !important;
+}
+
+a.su-button.bouton-accueil span small {
+    font-size: inherit;
+} 
