@@ -53,7 +53,12 @@
 	#menu-secondary li li a {
 		background: #E50745 !important;
 		border-color: #0C7798;
+		top: 8px;
 	}
+	
+	/* #menu-secondary li li a:hover {
+		top: 0;
+	} */
 	
 	.menu li>ul::before {
 		border-bottom-color: transparent !important;
@@ -245,8 +250,8 @@ aside#sidebar-subsidiary {
 
 	#menu-secondary li a, #menu-secondary .menu-toggle button {
 		color: rgba(255,255,255,1) !important;
-		background: rgba(104,145,175,0.5) !important;
-		border-color: rgba(104,145,175,1) !important;
+		background: rgba(12, 119, 152,0.5) !important;
+		border-color: rgba(12, 119, 152,1) !important;
 	}
 
 	div#clea-branding {
@@ -282,8 +287,8 @@ aside#sidebar-subsidiary {
 
 	#menu-secondary li a, #menu-secondary .menu-toggle button {
 		color: rgba(255,255,255,1) !important;
-		background: rgba(104,145,175,0.5) !important;
-		border-color: rgba(104,145,175,1) !important;
+		background: rgba(12, 119, 152,0.5) !important;
+		border-color: rgba(12, 119, 152,1) !important;
 	}
 
 	nav#menu-secondary {
@@ -314,9 +319,8 @@ aside#sidebar-subsidiary {
 @media only screen and (min-width: 800px) and (max-width: 1024px){
 
 	#menu-secondary li a, #menu-secondary .menu-toggle button {
-		color: rgba(255,255,255,1) !important;
-		background: rgba(104,145,175,0.5) !important;
-		border-color: rgba(104,145,175,1) !important;
+		background: rgba(12, 119, 152,0.5) !important;
+		border-color: rgba(12, 119, 152,1) !important;
 	}
 
 	nav#menu-secondary {
@@ -450,30 +454,30 @@ header#header .wrap {
 } */
 
 blockquote {
-	outline-color: rgba(104,145,175,1) !important;
-	background-color: rgba(104,145,175,1) !important;
+	outline-color: rgba(12, 119, 152,1) !important;
+	background-color: rgba(12, 119, 152,1) !important;
 	/* color: #656565 !important; */
 }
 
 /*** formulaire contact form 7 ***/
 textarea.wpcf7-form-control,
 input.wpcf7-form-control.wpcf7-text {
-	border: 2px solid rgba(104,145,175,1) ;
+	border: 2px solid rgba(12, 119, 152,1) ;
 	border-radius: 10px;
 }
 
 input.wpcf7-form-control.wpcf7-submit.font-primary.font-secondary {
 	font-size: 120%;
 	border-radius: 10px;
-	color: #F49631;
+	color: #E50745;
 	font-weight: 800;
 	background-color: transparent;
-	border: 2px solid rgba(104,145,175,1) ;
+	border: 2px solid rgba(12, 119, 152,1) ;
 }
 
 
 .font-headlines, h1, h2, h3, h4, h5, h6 {
-	color: #25597F !important;
+	color: #0C7798 !important;
 }
 
 #footer {

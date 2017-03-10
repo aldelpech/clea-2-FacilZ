@@ -1,0 +1,186 @@
+/**
+ * Theme Name:  Clea 2 Facilitation Z (child of StarGazer)
+ * Theme URI:   
+ * Description: Un thème pour un site "impact"
+ * Version:     1.0.0
+ * Author:      Anne-Laure Delpech
+ * Author URI:  http://parcours-performance.com
+ * Tags:        
+ * Text Domain: 
+ * License:     GNU General Public License v2.0 or later
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ * Template:    stargazer
+ */
+ 
+
+/***
+* bleu 	#0C7798 (12, 119, 152, 1)
+* rouge #E50745	(229, 7, 69, 1)
+**/ 
+ 
+/*
+
+
+* TABLE OF CONTENTS:
+
+ * 		1 - Header and Footer
+ * 		2 - Main and Content
+ * 		3 - Media
+ * 		4 - Sidebars and Widgets
+ * 		5 - Comments Template
+ * 		6 - Menus
+ * 		7 - Plugins
+*/
+
+
+.font-primary, body, input, textarea, .label-checkbox, .label-radio, .required, #site-description, #reply-title small {
+	font-family: 'Open Sans', sans-serif !important;
+}
+
+
+
+
+/********************************************************************************************************
+ * 1 - Header and Footer
+ *
+ * .
+ ********************************************************************************************************/
+
+/* 
+@media only screen and (min-width: 800px) {
+		
+	#branding {
+		width: 80%;
+		max-width: none ;
+	}
+}
+
+
+.ltr.display-header-text .custom-logo {
+	position: relative;
+	top: 30px;
+}
+*/
+
+
+
+.site-header .wrap {
+    /* https://css-tricks.com/using-flexbox/ */
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;      /* TWEENER - IE 10 */
+	display: -webkit-flex;     /* NEW - Chrome */
+	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+aside#sidebar-inside-header {
+    /* https://css-tricks.com/using-flexbox/ */
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;      /* TWEENER - IE 10 */
+	display: -webkit-flex;     /* NEW - Chrome */
+	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    flex-direction: row-reverse;
+    justify-content: space-around;
+	align-items: center;
+}
+
+
+/********************************************************************************************************
+ * 2 - Main and Content
+ *
+ * .
+ ********************************************************************************************************/
+
+/* ====== full width layouts ====== */
+.layout-2c-l #container>.wrap,
+.layout-2c-l #footer>.wrap {
+    max-width: 100%;
+}
+
+@media only screen and (min-width: 1075px) {
+	#menu-primary>.wrap {
+		max-width: 1075px;
+	}
+
+	header#header,
+	#main {
+		max-width: 1075px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+}
+
+
+/********************************************************************************************************
+ * 3 - Media
+ *
+ * .
+ ********************************************************************************************************/
+
+/* ====== images ====== */
+img {
+
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+}
+
+figcaption.wp-caption-text.font-secondary {
+    position: initial;
+}
+
+.ltr .wp-caption .wp-caption-text {
+    margin-right: 0;
+    text-align: center;
+}
+
+
+/********************************************************************************************************
+ * 4 - Sidebars and Widgets
+ *
+ * .
+ ********************************************************************************************************/
+
+/* ======  ====== */
+
+/* ====== Subsidiary sidebar ====== */
+#sidebar-subsidiary {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/********************************************************************************************************
+ * 5 - Comments Template
+ *
+ * .
+ ********************************************************************************************************/
+
+/* ======  ====== */
+
+/********************************************************************************************************
+ * 6 - Menus
+ *
+ * .
+ ********************************************************************************************************/
+
+
+
+/* ======  ====== */
+
+/********************************************************************************************************
+ * 7 - Plugins 
+ *
+ * .
+ ********************************************************************************************************/
+
+
+
+
+
+
+
