@@ -480,6 +480,7 @@ input.wpcf7-form-control.wpcf7-submit.font-primary.font-secondary {
 	color: #0C7798 !important;
 }
 
+<<<<<<< HEAD
 .font-headlines, h1, h2, h3, h4, h5, h6 {
 	color: #0C7798 !important;
 }
@@ -488,6 +489,8 @@ h4.font-headlines {
 	margin-bottom: 0;
 }
 
+=======
+>>>>>>> origin/master
 #footer {
 	background: #0C7798 !important;
 	padding: 0 !important;
