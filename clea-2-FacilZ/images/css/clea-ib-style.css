@@ -1,0 +1,468 @@
+/* 
+*
+* style site IB
+*
+*/
+
+/*** Page d'accueil définie dans clea-ib-front-page.css ***/
+
+/********************************************************************************************************
+ * 4 - Images 
+ *
+ ********************************************************************************************************/
+
+img {
+	border: none !important;
+	padding: 0 !important;
+}
+
+/* gravatar for testimonials */
+.testimonial-image img.avatar {
+	border-radius: 15px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	width: 100px;
+	height: 100px;
+}
+
+
+/********************************************************************************************************
+ * 3 - Polices corps et titres
+ *
+ ********************************************************************************************************/
+p {
+	font-size: 95% !important;
+	line-height: 1.4;
+}
+
+h1 {
+	font-size: 2rem !important;
+}
+
+h2 {
+	font-size: 1.5rem !important;
+	font-style: italic !important;
+}
+
+h3 {
+	font-size: 1.2rem !important;
+	font-variant: small-caps;
+}
+
+h4 {
+	font-size: 1.1rem !important;
+}
+
+h5 {
+	font-size: 1rem !important;
+}
+
+h6 {
+	font-size: 0.95rem !important;
+	font-style: italic !important;
+}
+
+
+h1, h2 {
+	margin-bottom: 1rem !important;
+	padding-bottom: 1rem !important;
+	border-bottom: 1px solid rgba(104,145,175,1) !important;
+}
+
+/* pour le contenu de strong testimonials */
+.testimonial-content h3 {
+	font-size: 1.2rem !important;
+}
+
+.testimonial-content p {
+	font-size: 1rem !important;
+	line-height: 1.5 !important;
+	text-align: left;
+}
+
+.testimonial .readmore {
+	font-size: 90%;
+	text-align: center;
+	font-style: italic;
+}
+
+span.clea-fonctions {
+	font-weight: 400;
+}
+
+span.entry-terms.clea-temoin {
+	font-size: smaller;
+	font-weight: 600;
+	margin-bottom: 20px;
+}
+
+.clea-first-name, .clea-last-name, .clea-fonctions {
+	margin-left: 1%;
+	font-size: 80%;
+}
+
+.clea-first-name {
+	display: inline-block;
+}
+
+.clea-last-name {
+	display: inline-block;
+	text-transform: uppercase;
+}
+
+.clea-fonctions {
+	display: inline;
+	font-style: italic;
+}
+
+.clea-fonctions::before {
+	content: " - ";
+}
+
+.testimonial-client {
+	margin-bottom: 2%;
+	line-height: 1;
+}
+
+/********************************************************************************************************
+ * 2 - header
+ *
+ ********************************************************************************************************/
+
+img.custom-logo {
+	width: auto;
+	height: 78px;
+	margin-bottom: 0 !important;
+} 
+ 
+.display-header-text #header,
+header#header.site-header {
+	border-bottom: 0;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+div#clea-header {
+	position: relative;
+}
+
+.custom-logo {
+	margin-bottom: 0 !important ;
+}
+
+.ib-fond {
+	display: flex;
+}
+
+.ltr.display-header-text #menu-secondary, .ltr.display-header-text #menu-secondary ul, .ltr.wp-custom-logo #menu-secondary, .ltr.wp-custom-logo #menu-secondary ul {
+	float: none !important;
+}
+
+.custom-background #header, .custom-background #main, .custom-background #sidebar-subsidiary {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+	
+aside#sidebar-subsidiary,
+.ib-fond {
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@media only screen and (max-width: 370px) {
+
+	img.custom-logo {
+		width: 62px;
+		height: 60px;
+	}
+
+	#menu-secondary li a, #menu-secondary .menu-toggle button {
+		color: rgba(255,255,255,1) !important;
+		background: rgba(104,145,175,0.5) !important;
+		border-color: rgba(104,145,175,1) !important;
+	}
+
+	div#clea-branding {
+		padding: 0;	
+	}
+
+	nav#menu-secondary {
+		position: initial;
+		width: initial;
+		max-width: 60% ;
+		margin-left: auto;
+	}
+
+	
+	/* Temoignages1200-400-300x100.jpg */
+	.display-header-text #header,
+	header#header.site-header {
+		background: url(../images/Temoignages1200-400-300x100.jpg) no-repeat center;
+		min-height: 100px;
+		background-size: 100%;
+		margin-top: -5px;
+
+	}
+
+	div#clea-header {
+		top: 30px;
+	}
+
+	aside#sidebar-subsidiary,
+	.ib-fond {
+		max-width: 90%;
+	}
+	
+}
+
+@media only screen and (min-width: 371px) and (max-width: 799px) {
+
+	#menu-secondary li a, #menu-secondary .menu-toggle button {
+		color: rgba(255,255,255,1) !important;
+		background: rgba(104,145,175,0.5) !important;
+		border-color: rgba(104,145,175,1) !important;
+	}
+
+	nav#menu-secondary {
+		position: initial;
+		width: initial;
+		margin-left: auto;
+	}	
+	
+	/*Temoignages1200-400-800x267.jpg */
+	.display-header-text #header,
+	header#header.site-header {
+		background: url(../images/Temoignages1200-400-800x267.jpg) no-repeat center;
+		min-height: 267px;
+		background-size: 100%;
+		margin-top: -15px;
+
+	}
+
+	div#clea-header {
+		top: 150px;
+	}
+
+	div#clea-branding {
+		padding: 0.5%;
+		display: flex;		
+	}
+	
+	aside#sidebar-subsidiary,
+	.ib-fond {
+		max-width: 95%;
+	}
+
+
+	
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1024px){
+
+	#menu-secondary li a, #menu-secondary .menu-toggle button {
+		color: rgba(255,255,255,1) !important;
+		background: rgba(104,145,175,0.5) !important;
+		border-color: rgba(104,145,175,1) !important;
+	}
+
+	nav#menu-secondary {
+		position: initial;
+		width: initial;
+		margin-left: auto;
+	}	
+	
+	.display-header-text #header,
+	header#header.site-header {
+		background: url(../images/Temoignages1200-400-1024x341.jpg) no-repeat center;
+		min-height: 341px;
+		background-size: 100%;
+		margin-top: -45px;
+
+	}
+
+	div#clea-header {
+		top: 170px;
+	}
+
+
+	div#clea-branding {
+		padding: 0.5%;
+		display: flex;		
+	}
+	
+	aside#sidebar-subsidiary,
+	.ib-fond {
+		max-width: 95%;
+	}
+		
+}
+
+@media only screen and (min-width: 1025px) {
+
+	.display-header-text #header,
+	header#header.site-header {
+		background: url(../images/Temoignages1200-400.jpg) no-repeat center;
+		min-height: 400px;
+		background-size: 100%;
+		margin-top: -35px;
+
+	}
+
+	div#clea-header {
+		top: 270px;
+	}
+
+	nav#menu-secondary {
+		display: flex;	
+		margin-top: auto;
+		margin-bottom: auto;
+		padding-top: 0 !important;
+	}
+	
+	div#clea-header {
+		background-color: rgba(104,145,175,0.5);
+	}
+
+	div#clea-branding {
+		padding: 0.5%;
+		display: flex;		
+	}
+
+	aside#sidebar-subsidiary,
+	.ib-fond {
+		max-width: 1075px;
+	}
+
+}
+	
+
+
+
+
+
+/********************************************************************************************************
+ * 1 - forme page 
+ *
+ ********************************************************************************************************/
+
+.custom-background #container>.wrap {
+	max-width: none !important;
+	margin-top: 0 !important;
+	margin-bottom: 20px !important;
+}
+
+.header-image {
+	width: 100%;
+	border-radius: 0;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+}
+
+header#header .wrap {
+	margin-left: 0 !important; 
+	margin-right: 0 !important;
+}
+
+@media only screen and (min-width: 800px) {
+
+	#main {
+		max-width: none;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	main#content {
+		max-width: 800px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+}
+
+#sidebar-subsidiary li {
+	display: block;
+}
+
+
+/********************************************************************************************************
+ * 0 - colors
+ *
+ * couleur primaire : Nepal #6891AF
+ * couleur arrière plan : violet #702192
+ 
+ * orange Sun #F49631 (244, 150, 49)
+ * orange clair Clementine #F5B053 (245,176,83)
+ * marron pale Pancho #E3C092 (227, 192, 146)
+ * bleu clair Nepal #6891AF (104,145,175)
+ * bleu foncé Bahamasblue #25597F(37,89,127)
+* 
+ ********************************************************************************************************/
+
+#menu-primary {
+	background: #e3c092;
+}
+
+
+#menu-secondary li a {
+	color: #FFFFFF !important;
+}
+
+blockquote {
+	outline-color: rgba(104,145,175,1) !important;
+	background-color: rgba(104,145,175,1) !important;
+	/* color: #656565 !important; */
+}
+
+/*** formulaire contact form 7 ***/
+textarea.wpcf7-form-control,
+input.wpcf7-form-control.wpcf7-text {
+	border: 2px solid rgba(104,145,175,1) ;
+	border-radius: 10px;
+}
+
+input.wpcf7-form-control.wpcf7-submit.font-primary.font-secondary {
+	font-size: 120%;
+	border-radius: 10px;
+	color: #F49631;
+	font-weight: 800;
+	background-color: transparent;
+	border: 2px solid rgba(104,145,175,1) ;
+}
+
+
+.font-headlines, h1, h2, h3, h4, h5, h6 {
+	color: #25597F !important;
+}
+
+#sidebar-subsidiary a,
+main#content a {
+	color: #F5B053 !important;
+}
+
+.strong-view.modern .testimonial-content:before, 
+.strong-view.modern .testimonial-content:after {
+	color: #25597F !important;
+	
+}
+
+a.su-button.su-button-style-flat.clea-ib-button {
+	font-size: 120%;
+	border-radius: 10px;
+	background-color: transparent !important;
+	border: 2px solid rgba(104,145,175,1) !important ;
+}
+
+a.su-button.su-button-style-flat.clea-ib-button span i.fa.fa-arrow-right,
+a.su-button.su-button-style-flat.clea-ib-button span {
+	font-weight: 800;
+	color: rgba(104,145,175,1) !important;
+}
+
+a.su-button.su-button-style-flat.clea-ib-button span i.fa.fa-arrow-right:hover,
+a.su-button.su-button-style-flat.clea-ib-button span:hover {
+	font-weight: 800;
+	color: #F49631 !important;
+}
