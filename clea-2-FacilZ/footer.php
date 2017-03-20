@@ -9,7 +9,7 @@
 		<footer <?php hybrid_attr( 'footer' ); ?>>
 
 			<div class="wrap">
-
+				<?php hybrid_get_menu( 'subsidiary' ); // Loads the menu/subsidiary.php template. ?>
 				<?php hybrid_get_menu( 'social' ); // Loads the menu/social.php template. ?>
 
 				<p class="credit">

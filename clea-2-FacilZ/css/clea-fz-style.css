@@ -66,7 +66,57 @@
 	
 } 
 
+/*****************************************************
+*
+* MENUS Subsidiary
+*
+******************************************************/ 
 
+#menu-subsidiary ul {
+	/* float: right; */
+	text-align: right;
+}
+
+.ltr #menu-subsidiary li {
+	margin-left: 24px;
+	border: 1px solid white;
+	padding: 0.5%;
+	margin-bottom: 2%;
+}
+
+.ltr #menu-subsidiary li:hover {
+	border: none;
+	padding: 0;
+
+}
+
+#menu-subsidiary ul li:hover > a, #menu-subsidiary ul li:focus > a {
+	background: #E50745;
+	color: white;
+}
+
+
+#menu-subsidiary li a {
+	margin: 0;
+	padding: .75rem 0;
+	font-weight: 600;
+	display: block;
+	font-size: .8125rem;
+	line-height: 1;
+	text-transform: uppercase;
+}
+
+#menu-subsidiary ul li a:hover, #menu-subsidiary ul li a:focus {
+	position: relative;
+	display: block;
+	/* width: 180px; */
+	padding: 18px 25px;
+	font-size: .75rem;
+	font-weight: 400;
+	line-height: 1.5;
+	border-top: 1px solid;
+	text-align: left;
+}
 
 /********************************************************************************************************
  * 3 - Polices corps et titres
@@ -180,6 +230,11 @@ img.alignnone.wp-post-image {
  *
  ********************************************************************************************************/
 
+#sidebar-subsidiary {
+	padding-top: 0 !important; 
+	border-top: none !important; 
+} 
+ 
 @media only screen and (max-width: 400px) {
 	
 	aside#sidebar-subsidiary section#nav_menu-2 {
@@ -480,7 +535,6 @@ input.wpcf7-form-control.wpcf7-submit.font-primary.font-secondary {
 	color: #0C7798 !important;
 }
 
-<<<<<<< HEAD
 .font-headlines, h1, h2, h3, h4, h5, h6 {
 	color: #0C7798 !important;
 }
@@ -489,8 +543,6 @@ h4.font-headlines {
 	margin-bottom: 0;
 }
 
-=======
->>>>>>> origin/master
 #footer {
 	background: #0C7798 !important;
 	padding: 0 !important;

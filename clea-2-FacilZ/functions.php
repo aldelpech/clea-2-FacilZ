@@ -39,7 +39,13 @@ function clea_ib_theme_setup() {
 
 	// Sets the 'post-thumbnail' size.
 	set_post_thumbnail_size( 175, 131, true );
-	
+
+	register_nav_menus(
+		array(
+		  'subsidiary' => __( 'Subsidiary' )
+		)
+	);
+
 }
 
 function clea_ib_custom_logo() {
